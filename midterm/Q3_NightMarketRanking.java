@@ -30,8 +30,25 @@ public class Q3_NightMarketRanking {
 }
 
 /*
- * Time Complexity: O(n^2)
- * 說明：
- * - 外層選擇排序迴圈 n 次，內層最多 n-1 次比較。
- * - 共約 n(n-1)/2 次比較，故為 O(n^2)。
+ * 時間與空間複雜度分析 (Time and Space Complexity Analysis):
+ *
+ * 1. 輸入處理：
+ *    - 讀取 n 筆評分資料，O(n)。
+ *
+ * 2. 排序邏輯：
+ *    - 採用 Selection Sort（選擇排序）對 scores[] 進行遞減排序。
+ *    - 外層執行 n - 1 次，內層最多執行 n - 1 次比較。
+ *    - 總比較次數為 n(n - 1) / 2，時間複雜度為 O(n^2)。
+ *    - 此排序為原地排序（in-place），不需額外空間。
+ *
+ * 3. 輸出：
+ *    - 輸出最多 5 筆資料，時間為 O(1)。
+ *
+ * 總結：
+ * - 時間複雜度：O(n^2)
+ * - 空間複雜度：O(n) 用來儲存 scores[] 陣列
+ *
+ * 備註：
+ * - 適合小型輸入（例如 n ≦ 1000）。
+ * - 若資料量較大，可改用 Arrays.sort + 自定 comparator 或其他 O(n log n) 演算法。
  */

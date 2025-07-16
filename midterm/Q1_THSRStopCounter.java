@@ -31,7 +31,17 @@ public class Q1_THSRStopCounter {
 }
 
 /*
- * Time Complexity: O(n)
- * 說明：
- * - 單次走訪 n 個站找起訖位置，其餘皆為常數操作。
+ * 時間複雜度分析 (Time Complexity Analysis):
+ *
+ * - 輸入讀取與分割：
+ *   - sc.nextLine().split(" ") 會將站名分割為陣列，時間為 O(n)，其中 n 為站數。
+ *
+ * - 尋找起點與終點索引：
+ *   - 一次 for 迴圈掃描 stops[] 陣列，共執行 n 次比較操作，時間為 O(n)。
+ *
+ * - Math.abs 與 println 為常數時間操作，O(1)。
+ *
+ * 綜合：
+ * - 整體時間複雜度為 O(n)，主要花費在輸入解析與搜尋站名索引。
+ * - 空間複雜度為 O(n)，用來儲存 stops[] 陣列。
  */

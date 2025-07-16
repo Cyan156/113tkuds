@@ -26,8 +26,23 @@ public class Q5_CPBLPrefixWins {
 }
 
 /*
- * Time Complexity: O(n)
- * 說明：
- * - 一次走訪原始陣列建立 prefix sum，耗時 O(n)
- * - 查詢前 k 項結果為 O(k)，整體仍為 O(n)
+ * 時間與空間複雜度分析 (Time and Space Complexity Analysis):
+ *
+ * 1. 讀取輸入：
+ *    - 長度為 n 的整數陣列輸入，使用 split 與 parse，共 O(n)。
+ *
+ * 2. 建立前綴和陣列 (Prefix Sum)：
+ *    - ps[i] = ps[i - 1] + a[i - 1]，總共執行 n 次，加總為 O(n)。
+ *
+ * 3. 輸出前 k 個 prefix sum 值：
+ *    - 印出 ps[1] 到 ps[k]，時間為 O(k)。
+ *    - 最多不超過 n，故視為 O(n)。
+ *
+ * 總體時間複雜度：
+ * - O(n) 來自輸入處理與 prefix sum 建構，與輸出加總。
+ *
+ * 空間複雜度：
+ * - 陣列 a[] 使用 O(n) 空間
+ * - prefix sum 陣列 ps[] 長度為 n+1，亦為 O(n)
+ * - 總空間複雜度為 O(n)
  */
